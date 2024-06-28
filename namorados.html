@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom dia meu amor</title>
+    <style>
+        body {
+            background-color: red;
+        }
+        
+        .painel {
+            text-align: center;
+            border-radius: 2px;
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            padding-top: 2px;
+            background-color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        #sim {
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+        
+        #não {
+            position: absolute;
+            margin-left: 70px;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="painel">
+        <h1>bom dia meu amor</h1>
+        <img src="urso.gif" alt="">
+
+        <h2>encontro sabado?</H2>
+
+        <a href="https://youtu.be/b0Ya9dPu1mo?si=ksSnEPGkBY-C2a0y"><button id="sim">sim</button></a>
+        <button onmouseover="fuja()" id="não">não</button>
+
+
+
+
+    </div>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("não")
+
+            var largurajanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = largurajanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+
+
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+
+</body>
+
+</html>
